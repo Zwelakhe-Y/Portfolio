@@ -1,0 +1,154 @@
+.carousal-image-size{
+    height: 60vh;
+}
+
+
+
+.mybutton{
+    color: white!important;
+    border-color: white !important;
+    outline-color: white !important;
+}
+
+.imgcard{
+    width: 3rem !important;
+    height: 3rem !important;
+}
+
+/* body */
+
+/* body card slider */
+.card1:hover{     
+    transform: scale(1.15);
+  }
+
+.card1{
+    transition: all 0.35s;
+}
+
+.cards-wrapper{
+    display: flex;
+}
+
+/* more reasons to join */
+.rcard{
+    display: flex!important;
+}
+
+/* collapse */
+
+.collpases{
+    /* display: flex; */
+    margin-left: 150px !important;
+    margin-bottom: 5px;
+    padding: 2%;
+    width: 80% !important;
+    background-color: gray;
+}
+
+.collapseimage{
+    /* color: white !important; */
+    background-color: white !important;
+    height: 30px !important;
+    width: 40px !important;
+}
+
+
+.collapseinfo{
+    background-color: rgb(174, 174, 174) !important;
+}
+
+/* Footer contact info */
+footer{
+    /* background-color: white; */
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+.footerlinks{
+    text-align: left !important;
+
+}
+
+/* .flinks:hover{
+    color: white;
+} */
+
+.flinks:link {
+    color: rgb(126, 126, 126);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .flinks:visited {
+    color: rgb(126, 126, 126);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .flinks:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  .flinks:active {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+.socials{
+    /* color: white; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+
+img.icon{
+    height: auto;
+    width: 30px;
+}
+
+.icon{
+    color: white;
+    background-color: white;
+    border-radius: 15px;
+    /* mix-blend-mode: multiply; */
+}
+.icon:hover {
+    scale: 1.2;
+    color: white;
+}
+
+.icon:before{
+    /* background: var(--color); */
+    color: white;
+    /* content: ""; */
+    position: flex;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+}
+
+.icon:hover:before{
+    animation: slide 0.35s forwards;
+    transition: slide 0.35s;
+}
+
+@keyframes slide{
+    50%{
+        left: 10%;
+        top: -40%;
+    }
+    100%{
+        left: -15%;
+        top: -15%;
+    }
+}

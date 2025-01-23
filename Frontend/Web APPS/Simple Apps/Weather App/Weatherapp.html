@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ICON -->
+    <link rel="icon" href="./ICON/android-chrome-192x192.png">
+     
+
+    <!-- SVG STYLING -->
+ 
+</head>
+<body class="bg-body">
+    
+    <div class="card">
+
+        <!-- -------------------------------------------------------------------
+                    SEARCH INPUT AREA
+        ------------------------------------------------------------------- -->
+        <div class="search">
+            <input type="text" placeholder="City Name / State Name" spellcheck="false" class="country-input">
+            <!-- SEARCH ICON -->
+            <button><img src="./Images/search.svg" alt="Search Icon" class="sIcon"></button>
+        </div>
+        <!-- -------------------------------------------------------------------
+                    DROPDOWN()
+        ------------------------------------------------------------------- -->
+        <div>
+            <ul class="autocomplete-list" id="cities">
+            
+            </ul>
+        </div>
+        <!-- -------------------------------------------------------------------
+                    WEATHER DETAILS AREA
+        ------------------------------------------------------------------- -->
+        <br>
+        <div class="weather">
+            <!-- -------------------------------------------------------------------
+                    MAIN WEATHER ICON AREA
+            ------------------------------------------------------------------- -->
+
+            <img src="./Images/person-placeholder.svg" alt="rain" class="weather-icon">
+            <br>
+            <br>
+            <h1 class="temp">0°C</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <!-- -------------------------------------------------------------------
+                DETAILS/HUMIDITY-VISIBILITY AND WIND-SPEED
+                ------------------------------------------------------------------- -->
+
+                <div class="row">
+                    <div>
+                        <img src="./Images/humidity.svg" alt="humidity-icon" class="detailsicons">
+                        <span style="color: rgb(255, 255, 13);"><p class="humidity">0%</p></span>
+                        <p>Humidity</p>
+                    </div>
+                    <br>
+                    
+                    <div>
+                        <img src="./Images/cloud-Icon.svg" alt="Visibility-icon" class="detailsicons">
+                        <span style="color: rgb(255, 255, 13);"><p class="cloud">--- ---</p></span>
+                        <p>Visibility</p>
+                    </div>
+                      <br>
+                     <div>
+                        <img src="./Images/wind.svg" alt="wind-speed-icon" class="detailsicons"> 
+                        <span style="color: rgb(255, 255, 13);"><p class="wind-speed">0km/h</p></span>
+                        <p>Wind-Speed</p>
+                    </div>
+                </div>
+                <div class="col">
+                   
+                </div>
+            </div>
+
+        </div>
+        <br>
+    </div>
+
+    <script>
+        
+
+
+        const apikey = "429c9ff8fee765f5be8d64ec18afcfab";
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
+
+        const searchBox = document.querySelector(".search input");
+        const searchBtn = document.querySelector(".search button");
+        const weatherIcon = document.querySelector(".weather-icon");
+        const backgroundPhoto = document.querySelector(".bg-body").style.backgroundImage;
+
+        async function checkweather(city){
+            const response = await fetch(apiUrl + city + `&appid=${apikey}`);
+            let data = await response.json();
+
+            console.log(data);
+
+            document.querySelector(".city").innerHTML = data.name;
+            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+            document.querySelector(".humidity").innerHTML = data.main.humidity +"%";
+            document.querySelector(".cloud").innerHTML = data.weather[0].main;
+            document.querySelector(".wind-speed").innerHTML = data.wind.speed + " Km/h";
+
+
+            /*
+            -------------------------------------------------
+            WEATHER ICONS
+            -------------------------------------------------
+            */
+            if (data.weather[0].main === "Clear"){
+
+                weatherIcon.src = "./Images/sun.svg"
+
+            } else if(data.weather[0].main === "Partly Cloudy"){
+
+                weatherIcon.src = "./Images/partly-cloudy.svg"
+
+            } else if(data.weather[0].main === "Clouds"){
+
+                weatherIcon.src = "./Images/clouds.svg"
+
+            } else if(data.weather[0].main === "Rain"){
+
+                weatherIcon.src = "./Images/rain.svg"
+
+            } else{
+
+                weatherIcon.src = "./Images/cloudy.svg"
+
+            };
+
+            
+
+            /*
+            -------------------------------------------------
+            BACKGROUND IMAGE
+            -------------------------------------------------
+            */
+            if (data.name === "New York"){
+
+                document.body.style.backgroundImage = "url('./ImagesBG/NewYork-pexels-vladalex94-1486222.jpg')";
+
+
+            }else if(data.name === "Tokyo"){
+                document.body.style.backgroundImage = "url('./ImagesBG/pexels-apasaric-1344537-tokyo.jpg')";
+            } 
+            
+            else if(data.name === "Berlin"){
+                document.body.style.backgroundImage = "url('./ImagesBG/berlin-pexels-annamw-1057840.jpg')"
+            }
+
+            else if(data.name === "London"){
+                document.body.style.backgroundImage = "url('./ImagesBG/london-pexels-chris-schippers-139261-427679.jpg')"
+            }
+
+            else if(data.name === "Johannesburg"){
+                document.body.style.backgroundImage = "url('./ImagesBG/JOZI2-pexels-sherissa-r-14660445.jpg')"
+            }
+
+            else if(data.name === "Paris"){
+                document.body.style.backgroundImage = "url('./ImagesBG/PARIS-pexels-elina-sazonova-1850619.jpg')"
+            }
+
+            else if(data.name === "Singapore"){
+                document.body.style.backgroundImage = "url('./ImagesBG/singapore2-pexels-kin-pastor-251088-777059.jpg')"
+            }
+
+            else if(data.name === "Rome"){
+                document.body.style.backgroundImage = "url('./ImagesBG/Rome-pexels-mikegiugliano-2940654.jpg')"
+            }
+
+            else if(data.name === "Barcelona"){
+                document.body.style.backgroundImage = "url('./ImagesBG/Barcelona2-pexels-enricoperini-819767.jpg')"
+            }
+
+            else if(data.name === "Madrid"){
+                document.body.style.backgroundImage = "url('./ImagesBG/Madrid-pexels-alexazabache-3254729.jpg')"
+            }
+
+            else if(data.name === "Cape Town"){
+                document.body.style.backgroundImage = "url('./ImagesBG/CapeTown2-pexels-pixabay-259447.jpg')"
+            }
+
+
+
+            else{
+
+                // weatherIcon.src = "./Images/cloudy.svg"
+                console.log("no image for city");
+                
+
+            };
+        };
+
+        searchBtn.addEventListener("click", ()=>{
+            checkweather(searchBox.value);
+        })
+        checkweather();
+
+        /*
+        --------------------------------------------------
+        DROPDOWN AUTOCOMPLETE
+        --------------------------------------------------
+        */
+
+        let countries = [];
+        const countryListElement = document.querySelector(".autocomplete-list");
+        const countryInputElement = document.querySelector(".country-input");
+
+        function fetchCountries(){
+            fetch("https://restcountries.com/v3.1/all")
+            .then((response) => response.json())
+            .then((data) => {
+                countries = data.map((x) => x.name.common);
+                countries.sort();
+
+                loadData(countries, countryListElement)
+                // console.log(countries);
+                
+                
+            });
+        };
+
+        function loadData(data, element){
+            if(data){
+                element.innerhtml = "";
+                let innerElement = "";
+                countries.forEach(item => {
+                    innerElement +=`<li> ${item} </li>`;   
+                });
+
+                element.innerHTML = innerElement;      
+            }
+
+        };
+
+        function filterData(data, searchText){
+            return data.filter((x) => x.toLowerCase().includes(searchText.toLowerCase()));
+
+        };
+
+        fetchCountries();
+
+        countryInputElement.addEventListener("input", function(){
+            const filteredData = filterData(countries, countryInputElement.value);
+            loadData(filteredData, countryListElement);
+        });
+
+        /*
+        --------------------------------------------------
+        INPUT SEARCH DISPLAY FUNCTION
+        --------------------------------------------------
+        */
+
+        let inputBox = document.querySelector(".country-input");
+
+        inputBox.addEventListener('input', function(){
+            document.querySelector('.autocomplete-list').style.display = "block";
+        });
+
+        let bodyclick = document.querySelector('.card')
+
+        bodyclick.addEventListener("click", function() {
+            document.querySelector('.autocomplete-list').style.display = "none";
+        })
+
+
+       
+
+
+        
+
+
+           
+    </script>
+
+</body>
+</html>

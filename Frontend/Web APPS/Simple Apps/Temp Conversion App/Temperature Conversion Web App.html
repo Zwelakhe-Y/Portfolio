@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion App</title>
+    <!-- -----------------------------------------
+    Personal Stylesheet
+    ----------------------------------------- -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="card">
+        <H3 class="header">Temperature Conversion</H3>
+
+        <h4>Celsius To Fahrenheit</h4>
+        <div>
+            Celsius Value: <br>
+            <input type="number" id="celsValueToConvert" placeholder="15°C"><span>°C</span>
+        </div>
+
+        <div>
+            <button class="convbuttons" onclick="
+            degreesConversion('°C');
+        "><img src="./Icons/arrow-down-circle-fill.svg" alt="" class="conIcons">
+            Convert Value
+        </button>
+        </div>
+
+    
+        <div class="farConvertValuediv">
+            Fahrenheit Value: <br>
+            <span class="valueF" type="number" placeholder="59°F" id="convValues">°F</span>
+        </div>
+        
+        
+
+    <h4>Fahrenheit To Celsius</h4>
+
+    <div>
+        Fahrenheit Value: <br> 
+        <input type="number" id="fahrenValueToConvert" placeholder="15°F"><span>°F</span>
+
+    </div>
+
+    <div>
+        <button class="convbuttons" onclick="
+        degreesConversion('°F');
+        "><img src="./Icons/arrow-down-circle-fill.svg" alt="" class="conIcons">
+        Convert Value
+        </button>
+    </div>
+    <div>
+        <span class="valueC" id="convValues">°C</span>
+    </div>
+
+    <br>
+
+
+    </div>
+    
+
+
+
+    
+    
+
+
+
+    
+
+    <script>
+       
+          /*
+        -----------------------------------------
+        DEGREES CONVERSION
+        -----------------------------------------
+        */
+
+        // let degrees = '°C';
+        // let value = 22
+
+        function degreesConversion(degrees){
+            
+
+            if(degrees === '°C'){
+                
+                function celTofarenConversion(value){
+
+                    let farenFormula = (value*9/5) + 32
+                    console.log(farenFormula.toString());
+
+                    document.querySelector(".valueF").innerHTML = farenFormula + '°F' + `\nor ${Math.round(farenFormula.toString())} Degrees Fahrenheit` ;
+
+                }
+
+                celTofarenConversion(document.getElementById('celsValueToConvert').value);
+
+            } else if(degrees === '°F'){
+                function farenTocelsiusConversion(value){
+
+                    let celsFormula = (value-32)* 5/9
+                    console.log(celsFormula.toString());
+
+                    document.querySelector(".valueC").innerHTML = celsFormula + '°C' + `\nor ${Math.round(celsFormula.toString())} Degrees Celcius` ;
+
+                }
+                farenTocelsiusConversion(document.getElementById('fahrenValueToConvert').value);
+            }
+        }
+
+        /*
+        -----------------------------------------
+        Convert to Fahrenheit Function
+        -----------------------------------------
+        */
+
+       
+
+        /*
+        -----------------------------------------
+        Convert to Celsius Function
+        -----------------------------------------
+        */
+
+
+        
+
+
+    </script>
+</body>
+</html>

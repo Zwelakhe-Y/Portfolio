@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en"
+style="font-size: large;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix-landing-page</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootsrap Icons Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Bootsrap elements Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- JavaScript Scrip -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: black;";>
+    <header>
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <!-- logo start-->
+            <div class="container-fluid">
+            <a class="navbar-brand text-danger" href="#">
+                <H2>
+                   NETFLIX
+                </H2>
+            </a>
+            <!-- logo end -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Language
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">English</a></li>
+                      <li><a class="dropdown-item" href="#">Afrikaans</a></li>
+                      <li><a class="dropdown-item" href="#">Isizulu</a></li>
+                      <li><a class="dropdown-item" href="#">Xhosa</a></li>
+                      <li><a class="dropdown-item" href="#">Sotho</a></li>
+                      <li><a class="dropdown-item" href="#">Pedi</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">More Languages</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-danger bg text-light" type="submit">Search</button>
+                  <br>
+                </form>
+                <button class="btn btn-outline-danger bg-danger text-light" type="Sign-in">Sign In</button>
+              </div>
+            </div>
+          </nav>
+        <!-- navbar end -->
+        <!-- carousel  start -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner carousal-image-size">
+                <!-- add this later to div carouel inner "carousal-image-size" -->
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="Netflix1.png" class="d-block w-100" alt="Netflixheader1">
+              </div>
+              <div class="carousel-item">
+                <img src="Netflixheader2.jpg" class="d-block w-100" alt="Netflixheader2">
+              </div>
+              <div class="carousel-item">
+                <img src="Netflixheader3.jpg" class="d-block w-100" alt="Netflixheader3">
+              </div>
+              <!-- carousal text and sign up button start -->
+              <div class="carousel-caption d-none d-md-block">
+                <h1 style="font-weight: bold;">Unlimited Movies,TV Shows and more</h1>
+                <h6>Starts at R49. Cancel anytime</h6>
+                <p>Enter your email below to get started</p>
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email Address" aria-label="Recipient's email" aria-describedby="button-addon2" id="signup">
+                    <button class="btn btn-outline-danger bg-danger text-light" type="button" id="button-addon2">Get Started</button>
+                </div>
+              </div>
+            </div>
+              <!-- carousal text and sign up button end -->
+             <!-- navigation buttons carousel start -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+            <!-- navigation buttons carousel end -->
+          <!-- carousal end -->
+    </header>
+    <br>
+    <br>
+    <section>
+      <h3 style="color: white;margin: auto; padding-left: 10%;">Trending Now</h3>
+      <!-- card movie slider -->
+      <div id="carouselExample" data-bs-ride="carousel" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="cards-wrapper">
+              
+              <!-- Card 1 start-->    
+                <div class="card card1" style="width: 7.5rem;height: 12rem; margin: 5%; margin-left: 10%;">
+                  <a href="#signup">
+                      <img src="trouble-2024.jpg" class="card-img-top" alt="Movi1">
+                  </a>
+                  <div class="card-body">
+                      <h1 class="card-title">1</h1>
+                  </div>
+                </div>
+                <!-- Card 1 end -->
+                
+                <!-- Card 2 start -->
+                <div class="card card1" style="width: 7.5rem;height: 12rem; margin: 5%;">
+                  <a href="#signup">
+                      <img src="Movie2.jpg" class="card-img-top" alt="Movie2">
+                  </a>
+                  <div class="card-body">
+                      <h1 class="card-title">2</h1>
+                  </div>
+                </div>
+                <!-- Card 2 end -->
+                <!-- Card 3 start -->
+                <div class="card card1" style="width: 7.5rem;height: 12rem; margin: 5%;">
+                  <a href="#signup">
+                      <img src="movie3.jpg" class="card-img-top" alt="Movie3">
+                  </a>
+                  <div class="card-body">
+                      <h1 class="card-title">3</h1>
+                  </div>
+                </div>
+                <!-- Card 3 end -->
+                <!-- Card 4 start -->
+                <div class="card card1" style="width: 7.5rem;height: 12rem; margin: 5%;">
+                  <a href="#signup">
+                      <img src="movie4.jpg" class="card-img-top" alt="Movie4">
+                  </a>
+                  <div class="card-body">
+                      <h1 class="card-title">4</h1>
+                  </div>
+                </div>
+                <!-- Card 4 end -->
+                <!-- Card 5 start -->
+                <div class="card card1" style="width: 7.5rem;height: 12rem; margin: 5%;">
+                  <a href="#signup">
+                      <img src="Movie5.jpg" class="card-img-top" alt="Movie5">
+                  </a>
+                  <div class="card-body">
+                      <h1 class="card-title">5</h1>
+                  </div>
+                </div>
+                <!-- Card 5 end -->
+              
+            </div>
+
+        </div>
+        <!-- Card movie slider nav buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style="width: 30px;">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" style="width: 30px;">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> 
+      <!-- card movie slider -->
+  
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section>
+      <!-- More reasons to Join start -->
+    <h3 style="color: white;margin: auto; padding-left: 10%;">More Reasons To Join</h3>
+    <br>
+    <!-- Card slider start -->
+    <div id="carouselExampleControls container-fluid" class="carousel carousel-light slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active row">
+                <div class="card-wrapper justify-content-around rcard">
+                    <!-- Card 1 start-->    
+                        <div class="card col-md-2" style="width: 14rem;height: 10%; color: white;background-color: gray;">
+                            <img src="tv-icon.svg" class="card-img-top" alt="tv-icon">
+                            <div class="card-body">
+                            <h5 class="card-title">Enjoy on your TV</h5>
+                            <p class="card-text">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                            </div>
+                      </div>
+                    <!-- Card 1 end -->
+                    <!-- Card 2 start -->
+                        <div class="card col-md-2" style="width: 14rem; height: 10%; color: white;background-color: gray;">
+                            <img src="download-icon.svg" class="card-img-top" alt="download-icon">
+                            <div class="card-body">
+                            <h5 class="card-title">Download your shows to watch offline</h5>
+                            <p class="card-text">Save your favorites easily and always have something to watch.</p>
+                            </div>
+                        </div>
+                    <!-- Card 2 end -->
+                    <!-- Card 3 start -->
+                        <div class="card col-md-2" style="width: 14rem; height: 10%; color: white;background-color: gray;">
+                            <img src="multiple-devices.svg" class="card-img-top" alt="multiple-devices">
+                            <div class="card-body">
+                            <h5 class="card-title">Watch everywhere</h5>
+                            <p class="card-text">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV..</p>
+                            </div>
+                        </div>
+                    <!-- Card 3 end -->
+                    <!-- Card 4 start -->
+                        <div class="card col-md-2" style="width: 14rem; height: 10%; color: white;background-color: gray;">
+                            <img src="profile-icon.svg" class="card-img-top" alt="profile-icon">
+                            <div class="card-body">
+                            <h5 class="card-title">Create profiles for kids</h5>
+                            <p class="card-text">Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
+                            </div>
+                        </div>
+                    <!-- Card 4 end -->
+                </div>
+            </div>
+        </div>                
+    </div>
+    <!-- Card slider end -->
+    <!-- More reasons to Join end-->
+    </section>
+     <br>
+     <br>
+     <section>
+           <!-- Frequently Asked Questions start -->
+     <h3 style="color: white;margin: auto; padding-left: 10%;">Frequently Asked Questions</h3>
+     <br>
+     <!-- Collapse 1 start -->
+      <div class="container-fluid">
+        <div class="container collpases row" style="color: white;">
+            <p class="d-inline-flex gap-1 col-md-11" style="font-size: 20px;">
+                What is Netflix?
+              </p>
+            <!-- collapse-icon start -->
+                <img src="plus-lg.svg" class="btn btn-primary btn-outline-secondary collapseimage" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" alt="collapse-icon"><img>
+            <!-- collapse-icon end-->
+            <!-- collapse-content start -->
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body collapseinfo">
+                    Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+
+                    You can watch as much as you want, whenever you want without a single commercial - all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!
+                </div>
+              </div>
+            <!-- collapse-content end -->
+        </div>
+      </div>
+     <!-- Collapse 1 end -->
+
+     <!-- Collapse 2 start -->
+      <div class="container-fluid">
+        <div class="container collpases row" style="color: white;">
+            <p class="d-inline-flex gap-1 col-md-11" style="font-size: 20px;">
+                How much does Netflix cost?
+              </p>
+
+            <!-- collapse-icon start -->
+                <img src="plus-lg.svg" class="btn btn-primary btn-outline-secondary collapseimage" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample" alt="collapse-icon"><img>
+            <!-- collapse-icon end-->
+
+            <!-- collapse-content start -->
+              <div class="collapse" id="collapseExample2">
+                <div class="card card-body collapseinfo">
+                    Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from R 49 to R 199 a month. No extra costs, no contracts.
+                </div>
+              </div>
+            <!-- collapse-content end -->
+        </div>
+      </div>
+     <!-- Collapse 2 end -->
+
+     <!-- Collapse 3 start -->
+      <div class="container-fluid">
+        <div class="container collpases row" style="color: white;">
+            <p class="d-inline-flex gap-1 col-md-11" style="font-size: 20px;">
+                Where can I watch?
+              </p>
+
+            <!-- collapse-icon start -->
+                <img src="plus-lg.svg" class="btn btn-primary btn-outline-secondary collapseimage" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample" alt="collapse-icon"><img>
+            <!-- collapse-icon end-->
+
+            <!-- collapse-content start -->
+              <div class="collapse" id="collapseExample3">
+                <div class="card card-body collapseinfo">
+                    Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+
+You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+                </div>
+              </div>
+            <!-- collapse-content end -->
+        </div>
+      </div>
+     <!-- Collapse 3 end -->
+
+     <!-- Collapse 4 start -->
+      <div class="container-fluid">
+        <div class="container collpases row" style="color: white;">
+            <p class="d-inline-flex gap-1 col-md-11" style="font-size: 20px;">
+                How can I cancel?
+            </p>
+
+            <!-- collapse-icon start -->
+                <img src="plus-lg.svg" class="btn btn-primary btn-outline-secondary collapseimage" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample" alt="collapse-icon"><img>
+            <!-- collapse-icon end-->
+
+            <!-- collapse-content start -->
+              <div class="collapse" id="collapseExample4">
+                <div class="card card-body collapseinfo">
+                    Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees - start or stop your account anytime.
+                </div>
+              </div>
+            <!-- collapse-content end -->
+        </div>
+      </div>
+     <!-- Collapse 4 end -->
+
+     <!-- Collapse 5 start -->
+      <div class="container-fluid">
+        <div class="container collpases row" style="color: white;">
+            <p class="d-inline-flex gap-1 col-md-11" style="font-size: 20px;">
+                What can I watch on Netflix?
+              </p>
+
+            <!-- collapse-icon start -->
+                <img src="plus-lg.svg" class="btn btn-primary btn-outline-secondary collapseimage" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample" alt="collapse-icon"><img>
+            <!-- collapse-icon end-->
+
+            <!-- collapse-content start -->
+              <div class="collapse" id="collapseExample5">
+                <div class="card card-body collapseinfo">
+                    Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+                </div>
+              </div>
+            <!-- collapse-content end -->
+        </div>
+      </div>
+     <!-- Collapse 5 end -->
+
+     <!-- Collapse 6 start -->
+      <div class="container-fluid">
+        <div class="container collpases row" style="color: white;">
+            <p class="d-inline-flex gap-1 col-md-11" style="font-size: 20px;">
+                Is Netflix good for kids?
+              </p>
+
+            <!-- collapse-icon start -->
+                <img src="plus-lg.svg" class="btn btn-primary btn-outline-secondary collapseimage" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample" alt="collapse-icon"><img>
+            <!-- collapse-icon end-->
+
+            <!-- collapse-content start -->
+              <div class="collapse" id="collapseExample6">
+                <div class="card card-body collapseinfo">
+                    The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.
+
+Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don't want kids to see.
+                </div>
+              </div>
+            <!-- collapse-content end -->
+        </div>
+      </div>
+     <!-- Collapse 6 end -->
+     <!-- Frequently Asked Questions  end--> 
+     </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <br>
+        <br>
+        <div>
+            <p>Ready to dive in ? Enter your email to create or restart your membership.</p>
+        <!-- signup input and button -->
+         <div class="container" style="width: 50%;">
+            <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Email Address" aria-label="Recipient's email" aria-describedby="button-addon2" id="signup">
+                <button class="btn btn-outline-danger text-light" type="button" id="button-addon2">Get Started</button>
+            </div>
+         </div>
+        </div>
+      </div>
+      <br>
+      <div style="margin-left: -620px;">
+        <p style="color: rgb(126, 126, 126);">Questions? Call <a href="tel:0 801-000-723" class="flinks">0 801-000-723</a></p>
+      </div>
+        <br>
+        <!-- footer links start-->
+        <div  class="container-fluid" style="margin-left: 20%;">
+            <div class="row">
+                <ul class="col-2 footerlinks" style="list-style: none;">
+                    <li><a href="https://help.netflix.com/en/node/412" class="flinks" style="text-decoration: none;">
+                      FAQ</a>
+                    </li>
+                    <li><a href="https://ir.netflix.net/ir-overview/profile/default.aspx" class="flinks" style="text-decoration: none">Investor Relations</a></li>
+                    <li><a href="https://www.netflix.com/watch" class="flinks" style="text-decoration: none">Ways to Watch</a></li>
+                    <li><a href="https://help.netflix.com/legal/corpinfo" class="flinks" style="text-decoration: none">Corporate Information</a></li>
+                    <li><a href="https://www.netflix.com/za/browse/genre/839338" class="flinks" style="text-decoration: none">Only on Netflix</a></li>
+                </ul>
+                <ul class="col-2 footerlinks" style="list-style: none;">
+                    <li><a href="https://help.netflix.com/" class="flinks" style="text-decoration: none;">Help Center</a></li>
+                    <li><a href="https://jobs.netflix.com/jobs" class="flinks" style="text-decoration: none">Jobs</a></li>
+                    <li><a href="https://help.netflix.com/legal/termsofuse" class="flinks" style="text-decoration: none">Terms of Use</a></li>
+                    <li><a href="https://help.netflix.com/contactus" class="flinks" style="text-decoration: none">Contact Us</a></li>
+                </ul>
+                <ul class="col-2 footerlinks" style="list-style: none;">
+                    <li><a href="https://www.netflix.com/youraccount" class="flinks" style="text-decoration: none;">Account</a></li>
+                    <li><a href="https://www.netflix.com/redeem" class="flinks" style="text-decoration: none">Redeem Gift Card</a></li>
+                    <li><a href="https://help.netflix.com/legal/privacy" class="flinks" style="text-decoration: none">Privacy</a></li>
+                    <li><a href="https://fast.com/" class="flinks" style="text-decoration: none">Speed Test</a></li>
+                </ul>
+                <ul class="col-2 footerlinks" style="list-style: none;">
+                    <li><a href="https://media.netflix.com/" class="flinks" style="text-decoration: none;">Media Center</a></li>
+                    <li><a href="https://www.netflix.com/gift-cards" class="flinks" style="text-decoration: none">Buy Gift Cards</a></li>
+                    <li><a href="https://www.netflix.com/za#" class="flinks" style="text-decoration: none">Cookie Preferances</a></li>
+                    <li><a href="https://help.netflix.com/legal/notices" class="flinks" style="text-decoration: none">Legal Notices</a></li>
+                </ul>
+            </div>
+        </div>
+         <!-- footer links end -->
+        <br>
+         <!-- Icons of socials start -->
+        <div class="socials">
+            <a href="https://www.instagram.com/netflixsa/?hl=en" class="icon"><i class="brand instagram">
+                <img src="instagram.svg" alt="instagram-icon" class="icon">
+            </i></a>
+            <a href="https://www.linkedin.com/company/netflix" class="icon"><i class="brand LinkedIn">
+                <img src="linkedin.svg" alt="Linkedin-icon" class="icon icon-linkedin">
+            </i></a>
+            <a href="https://www.youtube.com/channel/UCWOA1ZGywLbqmigxE4Qlvuw" class="icon"><i class="brand Youtube">
+                <img src="youtube.svg" alt="YouTube Icon" class="icon"> 
+            </i></a>
+            <a href="https://twitter.com/netflix?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="icon"><i class="brand Twitter">
+                <img src="twitter-x.svg" alt="Twitter icon" class="icon" style="height: 30px; width: auto" >
+            </i></a>
+        </div>
+         <!-- Icons of socials end-->
+        <br>
+        <br>
+        <div class="foot">2024 © All rights reserved to Zwelakhe Yende</div>
+        <br>
+        <br>
+    </footer>
+</body>
+</html>

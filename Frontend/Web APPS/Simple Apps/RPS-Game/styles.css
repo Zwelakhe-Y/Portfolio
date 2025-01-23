@@ -1,0 +1,46 @@
+body {
+  background-color: grey;
+}
+
+.Main-heading {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.clickablesDIV {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-image: url("./Container-Images/istockphoto-859591554-612x612-notext.jpg");
+  background-size: 20%;
+  border-radius: 2rem;
+  min-height: 15rem;
+}
+
+.clickables {
+  color: grey;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.clickables:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.clickIMG {
+  max-height: 4rem;
+  max-width: auto;
+  border-radius: 50%;
+}
+
+.scoreHeading {
+  text-align: center;
+}
+
+.ScoreDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgba(127, 232, 255, 0.83);
+}/*# sourceMappingURL=styles.css.map */

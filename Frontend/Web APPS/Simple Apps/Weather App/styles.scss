@@ -1,0 +1,142 @@
+                        //  -------------------------------------------------------------------
+                        // PRE DEFINED
+                        // ------------------------------------------------------------------- 
+
+
+$color1: #ebfffc;
+$color2: #00feba;
+$color3: black;
+$color4text: #555;
+$gradientcolor: #5b548a;
+$bgcolor: linear-gradient(135deg, rgba(58, 75, 71, 0.896), rgb(91, 84, 138, 80%));
+@font-face {
+    font-family: Weatherfont;
+    src: url("./Fonts/Merriweather/Merriweather-Black.ttf");
+}
+
+
+                        //  -------------------------------------------------------------------
+                        // PRE STYLING
+                        // ------------------------------------------------------------------- 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.appcontainer{
+    background-color: $color2;
+}
+
+.bg-body{
+    // background-color: #222;
+    background-image: url("./ImagesBG/default-pexels-marcel-kodama-862588-2179424.jpg");
+    background-size: 110%;
+    // background-repeat: no-repeat;
+    font-family: Weatherfont;
+    // background-image: url("./ImagesBG/CapeTown2-pexels-pixabay-259447.jpg");
+
+   
+}
+
+                        //  -------------------------------------------------------------------
+                        // CARD STYLING
+                        // -------------------------------------------------------------------
+
+.card{
+    width: 90%;
+    max-width: 29.375rem;
+    background: $bgcolor;
+    color: #fff;
+    margin: 6.25rem auto 0;
+    border-radius: 20px;
+    padding: 2.5rem 2.188rem;
+    text-align: center;
+}
+
+                        //  -------------------------------------------------------------------
+                        // SEARCHBAR AND INPUT AREA STYLING
+                        // -------------------------------------------------------------------
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background-color: $color1;
+    color: $color4text;
+    padding: 0.625rem 1.563rem;
+    height: 3.75rem;
+    flex: 1;
+    margin-right: 1rem;
+    font-size: 1.125rem;
+    border-radius: 1rem;
+
+}
+
+.search button{
+    border: 0;
+    outline: 0;
+    background-color: $color1;
+    border-radius: 50%;
+    width: 3.75rem;
+    height: 3.75rem;
+}
+
+.autocomplete-list{
+    position: absolute;
+    display: none;
+    color: #555;
+    list-style: none;
+    margin: 0;
+    margin-top: -0.820rem;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    background-color: #fff;
+    width: 21.55%; //31.6% FOR LATOP 1024 X 1059
+    max-height: 10rem;
+    overflow-y: auto;
+    border-radius: 0 0 1rem 1rem;
+    text-align: left;
+}
+
+li:hover{
+    background-color: #5b548a;
+    color: white;
+    cursor: pointer;
+}
+
+
+.sIcon{
+    cursor: pointer;
+    min-height: 2rem;
+    transition: .2s;
+}
+
+.sIcon:hover{
+    transform: scale(1.1); 
+}
+
+                        //  -------------------------------------------------------------------
+                        // WEATHER AREA STYLING
+                        // -------------------------------------------------------------------
+
+.weather-icon{
+    min-height: 13rem;
+}
+
+.detailsicons{
+    color: $color1 !important;
+    min-height: 5rem;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-top: 2rem;
+}

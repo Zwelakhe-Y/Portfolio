@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <!-- -------------------------------------------
+    WEB ICON
+    ------------------------------------------- -->
+    <link rel="icon" href="./Web-Icon/favicon.ico">
+    <!-- -------------------------------------------
+    PERSONAL STYLESHEET
+    ------------------------------------------- -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2 class="Main-heading">ROCK PAPER SCISSORS GAME</h2>
+
+    <div class="clickablesDIV">
+        <br>
+        <br>
+        <br>
+
+        <button onclick="
+            playGame('Rock');
+
+            console.log(results);
+        " class="clickables" title="Rock-Icon">
+            <img src="./Clickable-Images/png-clipart-rock.png" alt="" class="clickIMG">
+
+        </button>
+
+        <button onclick="
+
+        
+            playGame('Paper');
+            
+            console.log(results);
+            
+        "  title="Paper-icon"
+        class="clickables"
+        >
+            <img src="./Clickable-Images/428-4288822_transparent-paper.png" alt="" class="clickIMG">        
+        </button>
+
+        <button onclick="
+        
+            playGame('Scissors')
+            
+            console.log(results);
+            
+        " title="Scissors-Icon"
+        class="clickables"
+        >
+            <img src="./Clickable-Images/png-clipart-hand-scissors.png" alt="" class="clickIMG">        
+        </button>
+        <br>
+        <br>
+        <!-- RESET BUTTON START -->
+        <button class="reset" onclick="
+        resetgame();
+
+        console.log('Score has been Reset');
+        
+        ">
+        Reset Score
+        </button>
+        <!-- RESET BUTTON END -->
+
+    </div>
+    
+    <!-- SCORE START -->
+    <h4 class="scoreHeading">Score:</h4>
+    <div  class="ScoreDiv">
+        <h5>Win:</h5>
+        <p class="winScore"></p>
+        <h5>Lose:</h5>
+        <p class="loseScore"></p>
+        <h5>Tie:</h5>
+        <p class="tieScore"></p>
+    </div>
+    <!-- SCORE END -->
+
+    
+   
+
+
+    <script>
+
+        // THIS LOADS THE SCORE SAVED IN LOCAL STORAGE WHEN A MOVE IS PLAYED
+        //AND THE JSON.PARSE TURNS THE STRING FORMAT BACK TO JAVASCRIPT FORMAT
+        //IN CASE THERE ISNT A SCORE SAVED ON LOCAL STORAGE THE FALLBACK VALUE IS THE OBJECT WITH WIN LOSE.....
+        let score = JSON.parse(localStorage.getItem('score')) || {
+                win: 0,
+                lose: 0,
+                tie: 0,
+            };
+
+        // const score ={
+        //     win: 0,
+        //     lose: 0,
+        //     tie: 0,
+        // };
+        
+        // let win = 0;
+        // let lose = 0;
+        // let tie = 0;
+
+        let playerMove = "";
+        const computerMove = pickComputerMove();
+
+        let results = '';
+
+        // --------------------------------------------
+        // FUNCTION PLAYGAME START
+        // -------------------------------------------
+        function playGame(playerMove){
+            
+            const computerMove = pickComputerMove();
+
+            
+
+            if(playerMove === 'Scissors'){
+
+                if(computerMove === 'Rock'){
+                results = 'lose';
+                score.lose += 1;
+
+                } else if (computerMove === 'Paper'){
+                    results = 'win';
+                    score.win += 1;
+                } else {
+                    results = 'tie';
+                    score.tie +=1;
+
+                };
+
+                document.querySelector('.winScore').innerHTML = score.win
+                document.querySelector('.loseScore').innerHTML = score.lose
+                document.querySelector('.tieScore').innerHTML = score.tie
+
+            }else if(playerMove === 'Paper'){
+
+                if(computerMove === 'Rock'){
+                    results = 'win';
+                    score.win += 1;
+                        
+                } else if (computerMove === 'Paper'){
+                    results = 'tie';
+                    score.tie += 1;
+                } else {
+                    results = 'lose';
+                    score.lose +=1;
+
+                };
+
+                document.querySelector('.winScore').innerHTML = score.win
+                document.querySelector('.loseScore').innerHTML = score.lose
+                document.querySelector('.tieScore').innerHTML = score.tie
+
+            }else if(playerMove === 'Rock'){
+    
+
+
+                if(computerMove === 'Rock'){
+                    results = 'tie';
+                    score.tie += 1;
+                
+                } else if (computerMove === 'Paper'){
+                    results = 'lose';
+                    score.lose += 1;
+                } else {
+                    results = 'win';
+                    score.win +=1;
+
+                };
+
+                document.querySelector('.winScore').innerHTML = score.win
+                document.querySelector('.loseScore').innerHTML = score.lose
+                document.querySelector('.tieScore').innerHTML = score.tie
+
+
+            }
+
+            // THIS SAVES THE SCORE IN LOCAL STORAGE AFTER EACH 
+            //BUT LOCAL STORAGE ONLY SUPPORTS STRINGS SO WE HAVE TO USE JSONS STRINGIFY METHOD TO TURN THE SCORE INTO STRING
+            localStorage.setItem('score', JSON.stringify(score));
+
+            alert(`You chose ${playerMove}.\n 
+Computer chose ${computerMove}.\n
+You ${results}
+            `);
+
+            
+            console.log(`Player Move: ${playerMove}\nComputer Move: ${computerMove}`);
+           
+
+
+        }
+        // --------------------------------------------
+        // FUNCTION PLAY GAME END
+        // -------------------------------------------
+
+
+        // -------------------------------------------
+        // RESET BUTTTON FUNCTION
+        // -------------------------------------------
+        function resetgame(){
+            score.win = 0;
+            score.lose = 0;
+            score.tie = 0;
+            document.querySelector('.winScore').innerHTML = score.win;
+            document.querySelector('.loseScore').innerHTML = score.lose;
+            document.querySelector('.tieScore').innerHTML = score.tie;
+            alert("Score has been reset")
+        }
+
+
+
+        // --------------------------------------------
+        // FUNCTION COMPUTER MOVE START
+        // --------------------------------------------
+        function pickComputerMove(){
+            const randomNumber = Math.random();
+            let computerMove = "";
+
+
+            if(randomNumber >= 0 && randomNumber <= 1/3){
+                computerMove = 'Rock';//BASICALLY THIS IS FOR US TO SEE WHAT THE COMPUTER PICKED IF THE CONDITION IS TRUE. BASICALLY A NAMING SYSTEM
+                
+
+                } else if(randomNumber >= 1/3 && randomNumber <= 2/3){
+                    computerMove = 'Paper';
+
+                } else{
+                    computerMove = 'Scissors';
+
+                };
+
+                return computerMove;
+                
+                }
+        // --------------------------------------------
+        // FUNCTION END
+        // --------------------------------------------
+
+        
+
+
+    </script>
+    
+</body>
+</html>
+
+
+<!-- //THE BELOW CODE CAN BE ADDED DIRECTLY ON THE IF STATEMENT WHERE IT SAYS HERE=1
+// alert('You chose Rock. Computer chose Rock. A tie') -->
+
+<!-- //THE BELOW CODE CAN BE ADDED DIRECTLY ON THE IF STATEMENT WHERE IT SAYS HERE=2
+// alert('You chose Rock. Computer chose Paper. You lose') -->
+
+<!-- //THE BELOW CODE CAN BE ADDED DIRECTLY ON THE IF STATEMENT WHERE IT SAYS HERE=3
+// alert('You chose Rock. Computer chose Scissors. You win') -->

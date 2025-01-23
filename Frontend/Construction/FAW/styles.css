@@ -1,0 +1,195 @@
+
+
+
+/* Optimize bootstrap */
+@import "/Personal Portfolio/Project 1/bootstrap/scss/_navbar.scss";
+@import "/Personal Portfolio/Project 1/bootstrap/scss/_carousel.scss";
+@import "/Personal Portfolio/Project 1/bootstrap/scss/_card.scss";
+@import "/Personal Portfolio/Project 1/bootstrap/scss/_buttons.scss";
+@import "/Personal Portfolio/Project 1/bootstrap/scss/_images.scss";
+@import "/Personal Portfolio/Project 1/bootstrap/scss/_containers.scss";
+@import "/Personal Portfolio/Project 1/bootstrap/scss/_grid.scss";
+@import "/Personal Portfolio/Project 1/bootstrap/scss/_tables.scss";
+@import "/Personal Portfolio/Project 1/bootstrap/scss/_forms.scss";
+
+/* Laptops desktops and monitors */
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+
+    .carousel-image-size{
+        width: 1120px;
+        height: 640px !important;
+    }
+
+
+    .projectstext{
+        padding-left: 10 !important;
+        padding-right: 10 !important;
+    }
+
+    .projectsimg4{
+        width: 700px !important;
+        height: 480px !important;
+        text-align: center !important;
+        padding-left: 60px;
+        padding-top: 120px;
+    }
+
+
+ }
+
+ /* laptops larger tablets smaller laptops */
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+    .carousel-image-size{
+        width: 100% !important;
+        height: 70vh !important;
+    }
+
+
+    p, h1, h2, h3, h4{
+     font-size: smaller;
+    }
+
+    .whowearecontainer{
+        width: 90% !important;
+    }
+
+    .invimgcontainer{
+        text-align: center;
+    }
+
+    .schoolimage{
+        height: auto;
+        width: 350px !important;
+    }
+
+    .investmentstext{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .projectstext{
+        padding-left: 10 !important;
+        padding-right: 10 !important;
+    }
+
+    .projectsimg4{
+        width: 600px !important;
+        height: 380px !important;
+        text-align: center !important;
+        padding-left: 60px;
+        padding-top: 120px;
+    }
+
+    
+ }
+
+ /* Ipads and Tablets */
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+    p, h1, h2, h3, h4, button{
+        font-size: smaller;
+       }
+    
+       .introcontainer{
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+       }
+
+    .carousel-image-size{
+        width: 690px;
+        height: 390px !important;
+    }
+
+    .sloganc{
+        font-size: 12px !important;
+    }
+
+    .projectstext{
+        padding-left: 10 !important;
+        padding-right: 10 !important;
+    }
+
+    
+    .projectsimgcontainer{
+        text-align: center !important;
+    }
+
+    .projectsimg4{
+        width: 300px !important;
+        height: 200px !important;
+        padding-top: 5px;
+    }
+   
+ }
+
+@media all and (max-width: 480px) { }
+
+
+/* Portrait */
+@media screen and (orientation:portrait) { /* Portrait styles here */ }
+/* Landscape */
+@media screen and (orientation:landscape) { /* Landscape styles here */ }
+
+
+/* predefined */
+h3{
+    color: #b35e26 !important;
+}
+
+.bttn-link:hover{
+    color: #FCF6F5;
+}
+
+.bttn-link2:hover{
+    color:#b35e26;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+
+/* carousal header */
+
+.carousel-image-size{
+    width: 100%;
+    height: 80%;
+}
+
+
+.navbar{
+    background-color: #9c5322 !important;
+}
+
+.logo{
+    width: 100px !important;
+    height: auto !important;
+    mix-blend-mode: multiply !important;
+
+}
+
+.headertransportarrow{
+    mix-blend-mode: multiply !important;
+}
+
+.text-colorscheme1{
+    color: #FCF6F5 !important;
+
+}
+
+/* INTRODUCTION */
+.introbtn{
+    background-color: #9c5322 !important;
+}
+
+/* WHY US SECTION */
+ .whyuscontainer{
+    background-image: url("pexels-jacobyclarkephoto-1579356-containerimage3.jpg")
+    /* position:relative !important; */
+ }
+
+ 

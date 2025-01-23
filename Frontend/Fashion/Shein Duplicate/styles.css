@@ -1,0 +1,192 @@
+/* Laptops desktops and monitors */
+/* laptops larger tablets smaller laptops */
+/* I-Pads and Tablets */
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .moreinfobuttons {
+    font-size: x-small;
+    margin-bottom: 0.6rem;
+  }
+  h1, h2, h3 {
+    font-size: large;
+  }
+  p {
+    font-size: 20px !important;
+  }
+  .contentdiv {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+  }
+}
+/* Phones */
+@media all and (max-width: 480px) {
+  .PicContainer {
+    align-items: center;
+  }
+  .moreinfobuttons {
+    font-size: x-small;
+    margin-bottom: 0.6rem;
+  }
+  h1, h2, h3, h4, h5 {
+    font-size: smaller;
+  }
+  p {
+    font-size: 13px !important;
+  }
+  .circledpictures {
+    max-height: 5rem !important;
+    border-radius: 5rem;
+    transition: transform 0.2s;
+  }
+  .fcontainer {
+    font-size: smaller;
+  }
+}
+@font-face {
+  font-family: Fashionhead;
+  src: url(BodoniModa-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+  font-family: "FashionheadIT";
+  src: url(BodoniModa-Italic-VariableFont_opsz\,wght.ttf);
+}
+.marginforheadings {
+  margin-left: 5rem;
+}
+
+body, p, h1, h2, h3 {
+  font-size: larger;
+}
+
+.navbarst {
+  background-color: #2b3e58 !important;
+}
+
+.logo {
+  height: 2rem !important;
+}
+
+.brname {
+  font-family: fashionhead;
+}
+
+.popupcn {
+  font-family: FashionheadIT;
+}
+
+#cimage {
+  max-height: 97vh;
+  min-width: 100%;
+}
+
+.ccaptions {
+  font-family: Fashionhead;
+  letter-spacing: 1rem;
+  box-shadow: 5px 5px;
+  font-weight: 700;
+  margin-top: 2rem !important;
+  padding: 2%;
+}
+
+.GP-HEADING {
+  font-family: Fashionhead;
+  font-weight: 700;
+}
+
+.GP-HEADING2 {
+  text-align: center;
+  font-family: Fashionhead;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.GP-HEADING2:hover {
+  color: #2d3c51;
+}
+
+.GP-HEADING3 {
+  text-align: right;
+  font-family: FashionheadIT;
+  font-weight: 700;
+}
+
+.popupcn1 {
+  font-family: FashionheadIT;
+  font-weight: 700;
+}
+
+.grid-pic {
+  max-width: 10rem;
+  box-shadow: 1px black;
+  border-radius: 8px;
+}
+
+.grid-pic:hover {
+  filter: brightness(75%);
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.flexbox {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+
+.contentdiv {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.circledpictures {
+  max-height: 8rem;
+  border-radius: 5rem;
+  transition: transform 0.2s;
+}
+
+.circledpictures:hover {
+  transform: scale(1.1);
+}
+
+.fcontainer {
+  background-color: #2d3c51;
+}
+
+.footerstyle {
+  font-size: small;
+  line-height: 2rem;
+  padding-top: 1rem;
+  color: white;
+}
+
+.footerheaders {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  font-family: Fashionhead;
+  font-size: medium;
+}
+
+.footerlists {
+  list-style: none;
+}
+
+.footerlinks {
+  text-decoration: none;
+  color: white;
+}
+
+.footerlinks:hover {
+  color: #617486;
+  text-decoration: underline;
+}
+
+.inputcontainer {
+  padding-bottom: 1rem;
+}
+
+.TnC {
+  color: white;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}/*# sourceMappingURL=styles.css.map */

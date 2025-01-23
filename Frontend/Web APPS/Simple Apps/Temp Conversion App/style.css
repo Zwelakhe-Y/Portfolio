@@ -1,0 +1,53 @@
+body {
+  background-image: url("./BG-Images/pexels-nadine-wuchenauer-695910-1726772.jpg");
+  background-size: 100% 180%;
+}
+
+.header {
+  color: #EFFAFD;
+}
+
+.card {
+  line-height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 5px 5px;
+  border-radius: 1rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  background: linear-gradient(to right, rgb(74, 139, 223), rgb(175, 238, 238) 70%);
+  text-align: center;
+}
+
+.convbuttons {
+  max-width: 65%;
+  height: auto;
+  padding: 1%;
+  border-radius: 1rem;
+}
+
+.convbuttons:hover {
+  color: #EFFAFD;
+  background-color: rgba(74, 139, 223, 0.7215686275);
+}
+
+input {
+  width: 30%;
+}
+
+#convValues {
+  color: #EFFAFD;
+  font-weight: 700;
+}
+
+.conIcons {
+  max-height: 15%;
+  width: 15%;
+}
+
+.farConvertValuediv {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-bottom: 1px solid black;
+}/*# sourceMappingURL=style.css.map */
