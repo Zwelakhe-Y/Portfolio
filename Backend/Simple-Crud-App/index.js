@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 
 
 //connects mongoDB to mongoose part 2 of 2
-mongoose.connect('mongodb+srv://zwelakheyende11:SYlysYQX3BlWsnum@cluster0-crudapp-backen.qgaiz.mongodb.net/')
+mongoose.connect('')
   .then(() => console.log('Database: Connected!'))
  .catch(() => {
     console.log('Database: Connection failed!')
